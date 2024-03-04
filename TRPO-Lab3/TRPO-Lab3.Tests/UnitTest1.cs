@@ -1,3 +1,5 @@
+using TRPO_Lab3.Lib;
+
 namespace TRPO_Lab3.Tests
 {
     public class Tests
@@ -10,7 +12,10 @@ namespace TRPO_Lab3.Tests
         [Test]
         public void Test1()
         {
-            Assert.Pass();
+            double area = CalculateArea.CalculateConeArea(10, 10);
+            double expected = 758.448;
+            Assert.Greater(area, expected - 0.001);
+            Assert.Greater(expected + 0.001, area);
         }
     }
 }

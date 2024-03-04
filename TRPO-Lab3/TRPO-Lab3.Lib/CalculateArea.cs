@@ -7,7 +7,7 @@
         public static double CalculateConeArea(double radius, double height)
         {
             double l = Math.Sqrt(radius*radius + height*height);
-            return Math.PI * radius * l + Math.PI * radius * radius;
+            return Math.PI * radius * (l + radius);
         }
     }
 }
