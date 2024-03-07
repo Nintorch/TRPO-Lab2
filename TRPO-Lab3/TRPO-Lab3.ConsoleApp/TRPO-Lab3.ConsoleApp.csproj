@@ -8,4 +8,8 @@
     <Nullable>enable</Nullable>
   </PropertyGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\TRPO-Lab3.Lib\TRPO-Lab3.Lib.csproj" />
+  </ItemGroup>
+
 </Project>
