@@ -1,0 +1,27 @@
+﻿<Window x:Class="TRPO_Lab3.Wpf.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:TRPO_Lab3.Wpf"
+        mc:Ignorable="d"
+        Title="Расчёт площади поверхности круглого конуса" Height="275" Width="486">
+    <Window.Resources>
+        <local:CalculateAreaViewModel x:Key="CalculateAreaViewModelContext"/>
+    </Window.Resources>
+    <Grid>
+        <Label x:Name="label" Content="Расчёт площади поверхности круглого конуса" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" Width="483" FontWeight="Bold" FontSize="20"/>
+        <Label x:Name="label1" Content="Данные для расчёта:" HorizontalAlignment="Left" Margin="10,47,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.537,0.579"/>
+        <Label x:Name="label1_Copy" Content="Радиус основания конуса:" HorizontalAlignment="Left" Margin="10,78,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.537,0.579"/>
+        <Label x:Name="label1_Copy1" Content="Высота конуса:" HorizontalAlignment="Left" Margin="10,109,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.537,0.579"/>
+        <Label x:Name="label1_Copy2" Content="Результат: Площадь поверхности равна" HorizontalAlignment="Left" Margin="10,140,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.537,0.579"/>
+        <Image x:Name="___img_cone_png" Margin="341,52,45,113" Source="/img/cone.png" Stretch="Fill"/>
+        <Image x:Name="___img_formula_png" Margin="10,192,339,21" Source="/img/formula.png" Stretch="Fill"/>
+        <Label x:Name="label1_Copy3" Content="Используемые формулы:" HorizontalAlignment="Left" Margin="10,166,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.537,0.579"/>
+        <Image x:Name="___img_pythagorus_png" Margin="172,192,190,21" Source="/img/pythagorus.png" Stretch="Fill"/>
+        <TextBox DataContext="{DynamicResource CalculateAreaViewModelContext}" x:Name="TextBox_Radius" HorizontalAlignment="Left" Margin="168,82,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" Text="{Binding Radius}"/>
+        <TextBox DataContext="{DynamicResource CalculateAreaViewModelContext}" x:Name="TextBox_Height" HorizontalAlignment="Left" Margin="168,113,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" Text="{Binding Height}"/>
+        <Label DataContext="{DynamicResource CalculateAreaViewModelContext}" x:Name="Label_Result" Content="{Binding Area}" HorizontalAlignment="Left" Margin="244,140,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.537,0.579" />
+
+    </Grid>
+</Window>
