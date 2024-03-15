@@ -26,3 +26,5 @@ jobs:
       run: dotnet build TRPO-Lab3/TRPO-Lab3.sln --no-restore
     - name: Test
       run: dotnet test TRPO-Lab3/TRPO-Lab3.sln --no-build --verbosity normal
+    - name: Upload ConsoleApp
+      uses: actions/upload-artifact@v4
