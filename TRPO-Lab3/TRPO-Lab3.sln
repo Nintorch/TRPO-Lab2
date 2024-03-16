@@ -9,7 +9,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TRPO-Lab3.Lib", "TRPO-Lab3.
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TRPO-Lab3.Tests", "TRPO-Lab3.Tests\TRPO-Lab3.Tests.csproj", "{34D4692B-BFE5-4683-AD57-14F7960A0A46}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TRPO-Lab3.Wpf", "TRPO-Lab3.Wpf\TRPO-Lab3.Wpf.csproj", "{2E023C81-6AF1-473F-8A0F-D99FF8C74073}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TRPO-Lab3.Wpf", "TRPO-Lab3.Wpf\TRPO-Lab3.Wpf.csproj", "{2E023C81-6AF1-473F-8A0F-D99FF8C74073}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TRPO-Lab3.AspNet", "TRPO-Lab3.AspNet\TRPO-Lab3.AspNet.csproj", "{9BB3D754-3E55-4091-94B3-BD539AD70737}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -33,6 +35,10 @@ Global
 		{2E023C81-6AF1-473F-8A0F-D99FF8C74073}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{2E023C81-6AF1-473F-8A0F-D99FF8C74073}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{2E023C81-6AF1-473F-8A0F-D99FF8C74073}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9BB3D754-3E55-4091-94B3-BD539AD70737}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9BB3D754-3E55-4091-94B3-BD539AD70737}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9BB3D754-3E55-4091-94B3-BD539AD70737}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9BB3D754-3E55-4091-94B3-BD539AD70737}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
