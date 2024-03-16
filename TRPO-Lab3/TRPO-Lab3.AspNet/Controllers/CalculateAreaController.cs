@@ -6,10 +6,8 @@ namespace TRPO_Lab3.AspNet.Controllers
 {
     public class CalculateAreaController : Controller
     {
-        private double radius = 0, height = 0;
-
         // GET: CalculateAreaController/Edit/5
-        public ActionResult Edit(int id)
+        public ActionResult Edit(double radius, double height)
         {
             return View(new CalculateAreaViewModel(radius, height));
         }
@@ -17,7 +15,7 @@ namespace TRPO_Lab3.AspNet.Controllers
         // POST: CalculateAreaController/Edit/5
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Edit(int id, IFormCollection collection)
+        public ActionResult Edit(double radius, double height, IFormCollection collection)
         {
             try
             {
@@ -25,11 +23,11 @@ namespace TRPO_Lab3.AspNet.Controllers
                 collection.TryGetValue(nameof(CalculateAreaViewModel.Height), out var new_height);
                 radius = Convert.ToDouble(new_radius);
                 height = Convert.ToDouble(new_height);
-                return RedirectToAction(nameof(Edit));
+                return RedirectToAction(nameof(Edit), new CalculateAreaViewModel(radius, height));
             }
             catch
             {
-                return View(new CalculateAreaViewModel(radius, height));
+                return RedirectToAction(nameof(HomeController.Error), "Home");
             }
         }
     }

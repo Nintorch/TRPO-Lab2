@@ -7,4 +7,25 @@
     <RootNamespace>TRPO_Lab3.AspNet</RootNamespace>
   </PropertyGroup>
 
+  <ItemGroup>
+    <Content Remove="wwwroot\img\cone.png" />
+    <Content Remove="wwwroot\img\formula.png" />
+    <Content Remove="wwwroot\img\pythagorus.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="6.0.16" />
+    <PackageReference Include="Swashbuckle.AspNetCore" Version="6.5.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\TRPO-Lab3.Lib\TRPO-Lab3.Lib.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="wwwroot\img\cone.png" />
+    <None Include="wwwroot\img\formula.png" />
+    <None Include="wwwroot\img\pythagorus.png" />
+  </ItemGroup>
+
 </Project>

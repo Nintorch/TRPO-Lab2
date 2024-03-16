@@ -4,6 +4,7 @@ namespace TRPO_Lab3.AspNet.Models
 {
     public class CalculateAreaViewModel
     {
+
         public double Radius { get; set; }
 
         public double Height { get; set; }

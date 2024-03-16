@@ -1,0 +1,53 @@
+﻿@model TRPO_Lab3.AspNet.Models.CalculateAreaViewModel
+
+@{
+    ViewData["Title"] = "Home Page";
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>CalculateAreaView</title>
+</head>
+<body>
+
+<h4>Расчёт площади поверхности круглого конуса</h4>
+<p><img src="@Url.Content("~/img/cone.png")"/></p>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Edit">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="Radius" class="control-label"></label>
+                <input asp-for="Radius" class="form-control" />
+                <span asp-validation-for="Radius" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Height" class="control-label"></label>
+                <input asp-for="Height" class="form-control" />
+                <span asp-validation-for="Height" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Area" class="control-label"></label>
+                <input asp-for="Area" class="form-control" />
+                <span asp-validation-for="Area" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Save" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<p>Используемые формулы:</p>
+<p><img src="@Url.Content("~/img/formula.png")"/></p>
+<p><img src="@Url.Content("~/img/pythagorus.png")"/></p>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}
+</body>
+</html>

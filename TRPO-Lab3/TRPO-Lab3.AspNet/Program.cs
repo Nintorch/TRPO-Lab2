@@ -22,6 +22,6 @@ app.UseAuthorization();
 
 app.MapControllerRoute(
     name: "default",
-    pattern: "{controller=Home}/{action=Index}/{id?}");
+    pattern: "{controller=CalculateArea}/{action=Edit}/{radius=0}/{height=0}");
 
 app.Run();
