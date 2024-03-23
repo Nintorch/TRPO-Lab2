@@ -1,6 +1,4 @@
-﻿using TRPO_Lab3.Lib;
-
-namespace TRPO_Lab3.AspNet.Models
+﻿namespace TRPO_Lab3.AspNet.Models
 {
     public class CalculateAreaViewModel
     {
@@ -9,15 +7,13 @@ namespace TRPO_Lab3.AspNet.Models
 
         public double Height { get; set; }
 
-        public double Area
-        {
-            get => CalculateArea.CalculateConeArea(Radius, Height);
-        }
+        public string AreaString { get; set; }
 
-        public CalculateAreaViewModel(double radius, double height)
+        public CalculateAreaViewModel(double radius, double height, double area)
         {
             Radius = radius;
             Height = height;
+            AreaString = area.ToString();
         }
     }
 }
